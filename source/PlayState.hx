@@ -20,13 +20,23 @@ class PlayState extends FlxState
 	override public function create()
 	{
 		super.create();
-		add(createMap(5, 5));
+
+		var tileMap:FlxTilemap = createMap(32, 32);
+
+		tileMap.scale.x = 0.2;
+		tileMap.scale.y = 0.2;
+
+		tileMap.screenCenter();
+
+		add(tileMap);
 	}
 
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
 	}
+
+	function buildMaze(width:Int, height:Int) {}
 
 	function createMap(width:Int, height:Int):FlxTilemap
 	{
@@ -35,7 +45,7 @@ class PlayState extends FlxState
 
 		var gridCSV = FlxStringUtil.arrayToCSV([
 			for (i in 0...height * width)
-				FlxG.random.bool() ? 0 : 1
+				FlxG.random.bool() ? 1 : 2
 		], width);
 
 		newMap.loadMapFromCSV(gridCSV, AssetPaths.tiles__png, 64, 64);
