@@ -9,7 +9,13 @@ import flixel.tile.FlxTilemap;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
-// TileMap that helps us convert from an index of a tile in our png to a tileMap index
+/**
+ * By Ethan Cook 
+ * For COMP-4478 2023!
+ * Bonus Exercice 1 + Pathfinding :D 
+ * 1163071
+ */
+// TileType that helps us convert from an index of a tile in our png to a tileMap index
 enum abstract TileType(Int) to Int
 {
 	var PATHWAY = 1;
