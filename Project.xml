@@ -36,6 +36,8 @@
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
+	<haxelib name="maze" />
+
 
 	<!--In case you want to use the addons package-->
 	<!--<haxelib name="flixel-addons" />-->
